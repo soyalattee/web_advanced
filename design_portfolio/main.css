@@ -1,0 +1,73 @@
+a {
+  text-decoration: none;
+  outline: none;
+  color: #666666;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+/* header design */
+header {
+  padding: 41px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-nav {
+  color: #666666;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav > ul > li {
+  padding: 0px 10px;
+}
+.contact-list > li {
+  padding: 0px 6px;
+}
+ul li {
+  display: inline-block;
+}
+/* container 1 introduce */
+.wrap-introduce {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.introduce-photo {
+  overflow: hidden;
+  border-radius: 100%;
+  width: 349px;
+  height: 349px;
+}
+.introduce-photo > img {
+  object-fit: cover;
+  width: 349px;
+}
+
+.introduce-desc > p {
+  font-size: 38px;
+  line-height: 30px;
+  font-weight: 700;
+}
+/* container 2 tech */
+.wrap-techstack,
+.wrap-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #42446e;
+}
+p.desc {
+  font-size: 24px;
+  color: #666666;
+}
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}

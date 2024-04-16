@@ -71,6 +71,8 @@ p.desc {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+
+/* container 3 project */
 .project-list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

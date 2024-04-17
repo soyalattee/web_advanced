@@ -24,6 +24,12 @@ header {
   justify-content: space-around;
   align-items: flex-start;
 }
+.wrap-section {
+  padding-top: 40px;
+}
+.container {
+  padding: 85px 0;
+}
 .header-nav {
   color: #666666;
   display: flex;
@@ -45,7 +51,6 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 165px 0;
 }
 .introduce-photo {
   display: flex;

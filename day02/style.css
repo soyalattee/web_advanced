@@ -1,0 +1,46 @@
+h1 {
+  color: orangered;
+  font-size: 24px;
+}
+p {
+  font-weight: bold;
+}
+.intro-blue {
+  font-weight: bold;
+  color: skyblue;
+}
+.container-intro #name {
+  font-weight: 600;
+  color: chocolate;
+}
+
+.container-playground {
+  border: 1px solid;
+  text-align: center;
+}
+.container-playground p {
+  font-size: 18px;
+}
+
+.description {
+  color: green;
+  color: yellow;
+  color: pink;
+}
+
+/* parent */
+.parent {
+  color: aquamarine;
+  font-size: 20px;
+  font-weight: 300;
+}
+.child1 {
+  color: blueviolet;
+  font-weight: 600;
+}
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
+}

@@ -38,16 +38,24 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 165px 0;
 }
 .introduce-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  border-radius: 100%;
+  border-radius: 300px;
   width: 349px;
   height: 349px;
+  background: linear-gradient(#e70faa, #00c0fd);
+  padding: 8px;
 }
 .introduce-photo > img {
   object-fit: cover;
+  border-radius: 300px;
   width: 349px;
+  height: 349px;
 }
 
 .introduce-desc > p {

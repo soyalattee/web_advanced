@@ -7,17 +7,22 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+ul {
+  margin: 0;
+}
 /* header design */
 header {
   padding: 41px 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 .header-nav {
   color: #666666;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
 }
 .header-nav > ul > li {
   padding: 0px 10px;

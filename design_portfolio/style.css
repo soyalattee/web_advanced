@@ -1,6 +1,10 @@
 html {
   font-family: "Poppins", sans-serif;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
 a {
   text-decoration: none;
   outline: none;
@@ -100,5 +104,62 @@ p.desc {
 /* container 3 project */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 48px 60px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.project-item {
+  width: 375px;
+  height: 570px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px 8px #c9c9c9;
+}
+
+.item-img-box {
+  height: 260px;
+}
+.item-img {
+  width: 100%;
+  /* height: 260px; */
+}
+.item-info {
+  box-sizing: border-box;
+  height: 310px;
+  padding: 28px;
+}
+.info-title {
+  font-size: 26px;
+  line-height: 26px;
+}
+.info-desc {
+  font-size: 18px;
+  line-height: 26px;
+  color: #666666;
+  font-weight: 300;
+  padding: 12px 0;
+}
+.info-tech {
+  font-size: 14px;
+  line-height: 26px;
+  color: #666666;
+  font-weight: 300;
+}
+.info-bold {
+  font-weight: 500;
+}
+.info-links {
+  display: flex;
+  justify-content: space-between;
+}
+.info-links img {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
+  padding-right: 8px;
+}
+.links-item {
+  padding-right: 20px;
+}
+.info-top {
+  height: 225px;
+  padding-bottom: 10px;
 }

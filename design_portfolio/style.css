@@ -96,6 +96,9 @@ p.gray {
   justify-content: center;
   align-items: center;
 }
+.wrap-techstack {
+  padding-bottom: 30px;
+}
 h3 {
   font-size: 40px;
   font-weight: 700;
@@ -104,10 +107,16 @@ h3 {
 p.desc {
   font-size: 24px;
   color: #666666;
+  padding-bottom: 160px;
+}
+p.desc.projects {
+  padding-bottom: 96px;
 }
 .tech-icons {
   display: grid;
+  grid-gap: 60px;
   grid-template-columns: repeat(6, 1fr);
+  place-items: center;
 }
 
 /* container 3 project */

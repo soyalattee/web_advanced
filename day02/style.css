@@ -44,3 +44,40 @@ p {
 .blue {
   color: blue;
 }
+
+/* position  */
+.parent-block {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: rebeccapurple;
+  margin: auto;
+  padding: 4px;
+  color: white;
+  font-weight: 200;
+}
+.parent-block div {
+  width: 120px;
+  border: 1px solid;
+  margin: 4px;
+}
+.block-absolute {
+  position: absolute;
+  right: 10px;
+}
+.block-relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.block-static {
+  /* 적용 안됨 */
+  left: 20px;
+  top: 40px;
+}
+.block-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  background-color: palevioletred;
+}

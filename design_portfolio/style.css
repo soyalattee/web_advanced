@@ -10,6 +10,10 @@ a:active {
 ul {
   margin: 0;
 }
+body {
+  /* 반응형은 추후 추가 */
+  min-width: 760px;
+}
 /* header design */
 header {
   padding: 41px 0;

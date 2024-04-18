@@ -147,12 +147,14 @@ p.desc.projects {
 .project-item {
   /* width: 375px; */
   /* height: 570px; */
+  display: flex;
+  flex-direction: column;
   border-radius: 40px;
   box-shadow: 0px 0px 30px 8px #c9c9c9;
 }
 
 .item-img-box {
-  height: 40%;
+  /* height: 40%; */
   overflow: hidden;
 }
 .item-img {
@@ -164,7 +166,7 @@ p.desc.projects {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 60%;
+  /* height: 60%; */
   padding: 28px;
 }
 .info-title {

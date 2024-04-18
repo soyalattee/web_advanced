@@ -2,19 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <link rel="icon" href="./fav/favicon.ico">
     <link rel="stylesheet" href="./style.css"></link>
+    <link rel="stylesheet" href="./responsive.css" media="(max-width: 768px)"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>soya design portfolio</title>
   </head>
-  <body>
-    <img class="duck" src="imgs/danceDuck.GIF" alt="duck">
-    <header>
-      <div class="logo">
+    <body>
+      <div class="container-duck">
+        <img class="duck" src="imgs/danceDuck.GIF" alt="duck">
+      </div>
+      <header>
+        <div class="logo">
         <img
-          src="./imgs/logo.png" alt=""
+          src="./imgs/soya.png" alt=""
         />
       </div>
     
@@ -59,12 +64,12 @@
       <section class="container wrap-introduce">
         <div class="introduce-desc">
           <p>Hi 👋,</p>
-          <p>My name is</p>
-          <p class="gray">Soya Park</p>
+          <p class="desc-name">My name is </p>
+          <p class="gray desc-name">Soya Park</p>
           <p>I build things for web</p>
         </div>
         <div class="introduce-photo">
-          <img src="https://s3-alpha-sig.figma.com/img/3e24/9d4a/68ef7bac9b2e7b78919f0e2b2b6995bc?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GJ-l1TKs~emld2Z2g7AvgX7vAEjUvqpTWVPA8u1bSKotqjNYDnUxBrXH0XPoVCgBJU9A-loURxwFEoaApnAtaVRF7ye1yTvIUcKOawbqTa6-gFftEDAlD6UnDBiOZ1RFEU5bxFCO2A1BJLGhgdHgHB~Eu2LgZorbYoE3scw66t03bxo83ML~RUhCOH2Ua5Bst7EqmC5QfUR7RDnbVjgjxexWRjaT3aInn54K3DDfy9Mh5qUxykj-do2RHKArVWPM4HQY8Rir~0fcCVkLGCPmDAhcgNAKdutv5UJWDbxfhAyijcujglVO2AjV70-vkbNnBfdJ6XnZ9a9iD1igEYH8-Q__" alt="">
+          <img src="imgs/photo_me.png" alt="">
         </div>
       </section>
       <section class="container wrap-techstack">
@@ -217,11 +222,11 @@
       <div class="footer-top">
         <div class="logo">
           <img
-            src="./imgs/logo.png" alt=""
+            src="./imgs/soya.png" alt=""
           />
         </div>
         <div class="bottom-contact">
-            <span>+91 12345 09876</span>
+            <span class="desktop">+91 12345 09876</span>
             <span>info@example.com</span>
           <!-- contact url list -->
           <ul class="contact-list">
@@ -265,7 +270,7 @@
           </ul>
         </nav>
         <!-- right : designed by -->
-        <p>Designed and built by <span class="purple">Pavan MG</span> with <span class="purple">Love</span> & <span class="pink">Coffee</span></p>
+        <p class="designed">Designed and built by <span class="purple">Pavan MG</span> with <span class="purple">Love</span> & <span class="pink">Coffee</span></p>
       </div>
     </footer>
   </body>

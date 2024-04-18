@@ -1,0 +1,38 @@
+.desktop {
+  display: none;
+}
+.wrap-introduce {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.introduce-photo,
+.introduce-photo > img {
+  width: 292px;
+  height: 292px;
+}
+.introduce-desc {
+  text-align: center;
+  padding-top: 10px;
+}
+.introduce-desc > p {
+  font-size: 32px;
+}
+.desc-name {
+  display: inline-block;
+}
+.footer-nav {
+  display: none;
+}
+.footer-bottom {
+  justify-content: center;
+}
+.designed {
+  text-align: center;
+}
+.bottom-contact {
+  flex-direction: column;
+  gap: 8px;
+}
+.bottom-contact span {
+  padding: 0 10px;
+}

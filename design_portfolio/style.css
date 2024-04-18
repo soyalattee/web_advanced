@@ -69,7 +69,9 @@ ul li {
   border-radius: 300px;
   width: 349px;
   height: 349px;
-  background: linear-gradient(#e70faa, #00c0fd);
+  background: linear-gradient(-45deg, #e70faa, #00c0fd);
+  background-size: 400%;
+  animation: Gradient 10s ease infinite;
   padding: 8px;
 }
 .introduce-photo > img {
@@ -87,7 +89,11 @@ ul li {
   color: #42446e;
 }
 p.gray {
-  color: #333333;
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  animation: Gradient 15s ease infinite;
 }
 /* container 2 tech */
 .wrap-techstack,
@@ -217,6 +223,17 @@ span.purple {
 span.pink {
   color: #cb26c3;
 }
+
+@keyframes Gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 /* grid 반응형 대응 */
 @media (max-width: 1240px) {
   .project-list {

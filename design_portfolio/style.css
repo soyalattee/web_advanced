@@ -9,6 +9,12 @@ p {
   padding: 0;
   margin: 0;
 }
+.duck {
+  position: fixed;
+  width: 70px;
+  right: 20px;
+  bottom: 10px;
+}
 a {
   text-decoration: none;
   outline: none;

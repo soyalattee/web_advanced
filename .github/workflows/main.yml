@@ -22,4 +22,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            ./design_portfolio/ /s3://pda-portfolio-soya
+            ./design_portfolio/ s3://pda-portfolio-soya

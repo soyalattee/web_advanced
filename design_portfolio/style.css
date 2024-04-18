@@ -13,12 +13,16 @@ p {
 }
 .logo img {
   width: 90px;
+  padding-top: 6px;
 }
-.duck {
+.container-duck {
+  cursor: pointer;
   position: fixed;
-  width: 70px;
   right: 20px;
   bottom: 10px;
+}
+.duck {
+  width: 70px;
 }
 a {
   text-decoration: none;
@@ -38,7 +42,7 @@ header {
   padding: 41px 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .wrap-section {
   padding-top: 40px;
@@ -51,7 +55,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 4px;
+
   gap: 40px;
 }
 .header-nav > ul > li {
@@ -133,7 +137,6 @@ p.desc.projects {
   grid-template-columns: repeat(6, 1fr);
   place-items: center;
 }
-
 /* container 3 project */
 .project-list {
   display: grid;
@@ -141,8 +144,8 @@ p.desc.projects {
   grid-template-columns: repeat(3, 1fr);
 }
 .project-item {
-  width: 375px;
-  height: 570px;
+  /* width: 375px; */
+  /* height: 570px; */
   border-radius: 30px;
   box-shadow: 0px 0px 30px 8px #c9c9c9;
 }
@@ -198,7 +201,6 @@ p.desc.projects {
 }
 /* footer */
 footer {
-  width: 1210px;
   margin: auto;
   padding-bottom: 40px;
 }

@@ -1,3 +1,6 @@
+.desktop {
+  display: none;
+}
 .wrap-introduce {
   display: flex;
   flex-direction: column-reverse;
@@ -25,4 +28,11 @@
 }
 .designed {
   text-align: center;
+}
+.bottom-contact {
+  flex-direction: column;
+  gap: 8px;
+}
+.bottom-contact span {
+  padding: 0 10px;
 }

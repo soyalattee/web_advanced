@@ -24,6 +24,28 @@ p {
 .duck {
   width: 70px;
 }
+.duck-hover {
+  display: none;
+  position: absolute;
+  top: -80px;
+  left: -60px;
+}
+.speech-bubble {
+  width: 100px;
+
+  top: -80px;
+  left: -60px;
+}
+.duck-hover span {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  top: 48px;
+  left: 12px;
+}
+.container-duck:hover .duck-hover {
+  display: block;
+}
 a {
   text-decoration: none;
   outline: none;

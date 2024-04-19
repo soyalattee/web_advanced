@@ -315,7 +315,9 @@ span.purple {
 span.pink {
   color: #cb26c3;
 }
-
+br {
+  display: none;
+}
 @keyframes Gradient {
   0%,
   100% {

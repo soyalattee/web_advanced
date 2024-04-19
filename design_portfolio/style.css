@@ -11,7 +11,7 @@
 :root[data-theme="dark"] {
   --font-normal: rgb(167, 167, 167);
   --font-title: #ebebeb;
-  --bg-color: radial-gradient(#111b27, #091d2e);
+  --bg-color: #091d2e;
   --font-menu: #ffffff;
   --shadow-color: rgb(0, 0, 0, 0.2);
   --bg-project-item: white;
@@ -25,7 +25,7 @@ body {
   max-width: 1228px;
   padding: 0 20px;
   background: var(--bg-color);
-  transition: background-color 3s;
+  transition: all 1s ease;
   background-size: 400%;
   animation: Gradient 3s ease infinite;
   color: var(--font-menu);

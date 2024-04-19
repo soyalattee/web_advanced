@@ -147,15 +147,24 @@ ul li {
   width: 349px;
   height: 349px;
 }
-.sunglasses {
-  display: none;
-}
-.sunglasses.on {
+.introduce-photo > img.sunglasses {
+  object-fit: cover;
   position: absolute;
   display: block;
+  visibility: hidden;
+  width: 100px;
+  height: auto;
+  top: -100px;
+  rotate: 30deg;
+  left: 0;
+  transition: all 0.5s ease-out;
+}
+.introduce-photo > img.sunglasses.on {
+  visibility: visible;
   width: 200px;
   height: auto;
   top: 95px;
+  left: auto;
   rotate: -5deg;
 }
 

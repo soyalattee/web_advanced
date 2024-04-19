@@ -120,6 +120,13 @@ header {
 ul li {
   display: inline-block;
 }
+.menu-mob {
+  display: none;
+}
+.menu-pc {
+  display: block;
+}
+
 /* container 1 introduce */
 .wrap-introduce {
   display: flex;
@@ -139,7 +146,13 @@ ul li {
   background: linear-gradient(-45deg, #e70faa, #00c0fd);
   background-size: 400%;
   animation: Gradient 5s ease infinite;
+  text-align: center;
+  overflow: hidden;
   padding: 8px;
+}
+.introduce-photo.on {
+  padding: 0;
+  overflow: visible;
 }
 .introduce-photo > img {
   object-fit: cover;
@@ -161,9 +174,9 @@ ul li {
 }
 .introduce-photo > img.sunglasses.on {
   visibility: visible;
-  width: 200px;
+  width: 210px;
   height: auto;
-  top: 95px;
+  top: 115px;
   left: auto;
   rotate: -5deg;
 }
@@ -182,6 +195,12 @@ p.gray {
   background-size: 300%;
   animation: Gradient 5s ease infinite;
 }
+p.gray.on {
+  background: linear-gradient(to right, #beff67 0%, #ffa069 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* container 2 tech */
 .wrap-techstack,
 .wrap-projects {
@@ -379,8 +398,8 @@ br {
     grid-gap: 24px 30px;
   }
   .tech-icons {
-    grid-gap: 48px 60px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 30px;
+    grid-template-columns: repeat(3, 1fr);
     /*   grid-gap: 60px; */
   }
 }

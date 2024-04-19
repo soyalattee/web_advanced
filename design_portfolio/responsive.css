@@ -1,6 +1,15 @@
 .desktop {
   display: none;
 }
+header {
+  padding: 20px 0;
+}
+.container {
+  padding: 40px 0;
+}
+.wrap-section {
+  padding: 10px;
+}
 .wrap-introduce {
   display: flex;
   flex-direction: column-reverse;
@@ -12,14 +21,28 @@
 }
 .introduce-desc {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .introduce-desc > p {
-  font-size: 32px;
+  font-size: 28px;
+  line-height: 46px;
 }
 .desc-name {
   display: inline-block;
 }
+/* wrap-techstack 영역 */
+.wrap-techstack p {
+  text-align: center;
+}
+p.desc {
+  padding-bottom: 40px;
+}
+
+.tech-icons img {
+  width: 80px;
+  height: auto;
+}
+/* footer */
 .footer-nav {
   display: none;
 }
@@ -38,4 +61,21 @@
 }
 br {
   display: block;
+}
+.introduce-photo > img.sunglasses.on {
+  visibility: visible;
+  width: 200px;
+  height: auto;
+  top: 95px;
+  left: auto;
+  rotate: -5deg;
+}
+.menu-mob {
+  display: block;
+}
+.menu-mob > li {
+  padding-right: 10px;
+}
+.menu-pc {
+  display: none;
 }

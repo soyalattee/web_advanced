@@ -147,7 +147,6 @@ ul li {
   background-size: 400%;
   animation: Gradient 5s ease infinite;
   text-align: center;
-  overflow: hidden;
   padding: 8px;
 }
 .introduce-photo.on {

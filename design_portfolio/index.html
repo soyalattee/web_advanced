@@ -11,10 +11,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>soya design portfolio</title>
+    <script>
+      function toggleMode() {
+        let isDark = document.documentElement.getAttribute('data-theme');
+        var audio = document.getElementById("audioPlayer");
+        if (isDark === 'dark') {
+          // 다크모드면 밝게
+          document.documentElement.setAttribute("data-theme", "light");
+          audio.pause();
+          toggleDark(false);
+        } else {
+          // light모드면 dark로
+          document.documentElement.setAttribute("data-theme", "dark"); 
+          audio.play();
+          toggleDark(true);
+        }
+      }
+      function toggleDark(isDark) {
+        const duckLight = document.getElementById('l-duck');
+        const duckDark = document.getElementById('d-duck');
+        const darkElements = document.getElementsByClassName('dark');
+        let elementsArray = Array.from(darkElements);
+        console.log(elementsArray)
+        if (isDark) {
+          duckDark.classList.add('on');
+          duckLight.classList.remove('on');
+          elementsArray.forEach(element => {
+            element.classList.add('on')
+          });
+        } else {
+          duckLight.classList.add('on');
+          duckDark.classList.remove('on');
+          elementsArray.forEach(element => {
+            element.classList.remove('on')
+          });
+        }
+      }
+    </script>
   </head>
     <body>
+      <audio id="audioPlayer" controls>
+        <source src="audio/Soul_Blaster_-_ede-studio.mp3" type="audio/mpeg">
+      </audio>
       <div class="container-duck">
-        <img class="duck" src="imgs/danceDuck.GIF" alt="duck">
+        <div class="duck-hover">
+          <span>Click Me!</span>
+          <img class="speech-bubble" src="imgs/speech-bubble.png" alt="">
+        </div>
+        <div onclick="toggleMode()">
+          <img id="l-duck" class="duck on" src="imgs/danceDuck.GIF" alt="dancing-duck">
+          <img id="d-duck" class="duck"src="imgs/duck-sun.GIF" alt="dancing-duck">
+        </div>
       </div>
       <header>
         <div class="logo">
@@ -69,7 +116,8 @@
           <p>I build things for web</p>
         </div>
         <div class="introduce-photo">
-          <img src="imgs/photo_me.png" alt="">
+          <img src="imgs/photo_me.png" alt="photo-profile">
+          <img class="sunglasses dark" src="imgs/sunglassses.PNG" alt="sunglasses" >
         </div>
       </section>
       <section class="container wrap-techstack">
@@ -270,7 +318,7 @@
           </ul>
         </nav>
         <!-- right : designed by -->
-        <p class="designed">Designed and built by <span class="purple">Pavan MG</span> with <span class="purple">Love</span> & <span class="pink">Coffee</span></p>
+        <p class="designed">Designed and built <br class="mob">by <span class="purple">Pavan MG</span> with <span class="purple">Love</span> & <span class="pink">Coffee</span></p>
       </div>
     </footer>
   </body>

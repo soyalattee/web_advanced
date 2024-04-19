@@ -36,3 +36,6 @@
 .bottom-contact span {
   padding: 0 10px;
 }
+br {
+  display: block;
+}

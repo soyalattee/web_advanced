@@ -1,3 +1,22 @@
+:root,
+:root[data-theme="light"] {
+  --font-normal: #666666;
+  --font-title: #42446e;
+  --bg-color: white;
+  --font-menu: #000000;
+  --shadow-color: #c9c9c9;
+  --bg-project-item: white;
+}
+
+:root[data-theme="dark"] {
+  --font-normal: rgb(167, 167, 167);
+  --font-title: #ebebeb;
+  --bg-color: radial-gradient(#111b27, #091d2e);
+  --font-menu: #ffffff;
+  --shadow-color: rgb(0, 0, 0, 0.2);
+  --bg-project-item: white;
+}
+
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -5,6 +24,11 @@ body {
   margin: 0 auto;
   max-width: 1228px;
   padding: 0 20px;
+  background: var(--bg-color);
+  transition: background-color 3s;
+  background-size: 400%;
+  animation: Gradient 3s ease infinite;
+  color: var(--font-menu);
 }
 
 p {
@@ -16,6 +40,7 @@ p {
   padding-top: 6px;
 }
 .container-duck {
+  z-index: 10;
   cursor: pointer;
   position: fixed;
   right: 20px;
@@ -23,11 +48,39 @@ p {
 }
 .duck {
   width: 70px;
+  display: none;
+}
+.duck.on {
+  display: inline-block;
+}
+.duck-hover {
+  display: none;
+  position: absolute;
+  top: -80px;
+  left: -60px;
+}
+.speech-bubble {
+  width: 100px;
+
+  top: -80px;
+  left: -60px;
+}
+.duck-hover span {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  top: 48px;
+  left: 12px;
+  color: #000000;
+}
+
+.container-duck:hover .duck-hover {
+  display: block;
 }
 a {
   text-decoration: none;
   outline: none;
-  color: #666666;
+  color: var(--font-normal);
 }
 a:hover,
 a:active {
@@ -51,7 +104,7 @@ header {
   padding: 85px 0;
 }
 .header-nav {
-  color: #666666;
+  color: var(--font-normal);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,6 +128,7 @@ ul li {
 }
 
 .introduce-photo {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,13 +147,33 @@ ul li {
   width: 349px;
   height: 349px;
 }
+.introduce-photo > img.sunglasses {
+  object-fit: cover;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  width: 100px;
+  height: auto;
+  top: -100px;
+  rotate: 30deg;
+  left: 0;
+  transition: all 0.5s ease-out;
+}
+.introduce-photo > img.sunglasses.on {
+  visibility: visible;
+  width: 200px;
+  height: auto;
+  top: 95px;
+  left: auto;
+  rotate: -5deg;
+}
 
 .introduce-desc > p {
   font-size: 58px;
   line-height: 70px;
   letter-spacing: -1px;
   font-weight: 700;
-  color: #42446e;
+  color: var(--font-title);
 }
 p.gray {
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
@@ -122,11 +196,11 @@ p.gray {
 h3 {
   font-size: 40px;
   font-weight: 700;
-  color: #42446e;
+  color: var(--font-title);
 }
 p.desc {
   font-size: 24px;
-  color: #666666;
+  color: var(--font-normal);
   padding-bottom: 160px;
 }
 p.desc.projects {
@@ -145,12 +219,12 @@ p.desc.projects {
   grid-template-columns: repeat(3, 1fr);
 }
 .project-item {
-  /* width: 375px; */
-  /* height: 570px; */
   display: flex;
   flex-direction: column;
   border-radius: 40px;
-  box-shadow: 0px 0px 30px 8px #c9c9c9;
+  box-shadow: 0px 0px 30px 8px var(--shadow-color);
+  overflow: hidden;
+  background: #ffffff;
 }
 
 .item-img-box {
@@ -172,6 +246,7 @@ p.desc.projects {
 .info-title {
   font-size: 26px;
   line-height: 26px;
+  color: #000000;
 }
 .info-desc {
   font-size: 18px;
@@ -229,7 +304,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
-  color: #666666;
+  color: var(--font-normal);
 }
 .footer-nav > ul > li {
   padding: 0 10px;
@@ -240,7 +315,9 @@ span.purple {
 span.pink {
   color: #cb26c3;
 }
-
+br {
+  display: none;
+}
 @keyframes Gradient {
   0%,
   100% {
@@ -306,4 +383,8 @@ span.pink {
     grid-template-columns: repeat(2, 1fr);
     /*   grid-gap: 60px; */
   }
+}
+/* audio */
+#audioPlayer {
+  display: none;
 }

@@ -16,14 +16,26 @@
         let isDark = document.documentElement.getAttribute('data-theme');
         console.log(isDark)
         if (isDark === 'dark') {
-          // 다크모드
+          // 다크모드면 밝게
           document.documentElement.setAttribute("data-theme", "light");
+          toggleDuck(false);
         } else {
-          // light 모드
+          // light모드면 dark로
           document.documentElement.setAttribute("data-theme", "dark"); 
+          toggleDuck(true);
         }
       }
-       
+      function toggleDuck(isDark) {
+        const duckLight = document.getElementById('l-duck');
+        const duckDark = document.getElementById('d-duck');
+        if (isDark) {
+          duckDark.classList.add('on');
+          duckLight.classList.remove('on');
+        } else {
+          duckLight.classList.add('on');
+          duckDark.classList.remove('on');
+        }
+      }
     </script>
   </head>
     <body class="dark">
@@ -34,7 +46,8 @@
           <img class="speech-bubble" src="imgs/speech-bubble.png" alt="">
         </div>
         <div onclick="toggleMode()">
-          <img class="duck" src="imgs/danceDuck.GIF" alt="duck">
+          <img id="l-duck" class="duck on" src="imgs/danceDuck.GIF" alt="dancing-duck">
+          <img id="d-duck" class="duck"src="imgs/duck-sun.GIF" alt="dancing-duck">
         </div>
       </div>
       <header>

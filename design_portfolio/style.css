@@ -1,3 +1,17 @@
+:root,
+:root[data-theme="light"] {
+  --font-normal: #666666;
+  --font-title: #42446e;
+  --bg-color: white;
+  --font-menu: #000000;
+}
+
+:root[data-theme="dark"] {
+  --font-normal: #666666;
+  --font-title: #42446e;
+  --bg-color: radial-gradient(#111b27, #091d2e);
+  --font-menu: #ffffff;
+}
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -5,6 +19,10 @@ body {
   margin: 0 auto;
   max-width: 1228px;
   padding: 0 20px;
+  background: var(--bg-color);
+  transition: all 0.5s ease;
+  background-size: 400%;
+  animation: Gradient 3s ease infinite;
 }
 
 p {
@@ -42,6 +60,9 @@ p {
   width: 80px;
   top: 48px;
   left: 12px;
+}
+span.dark {
+  color: var(--font-normal);
 }
 .container-duck:hover .duck-hover {
   display: block;

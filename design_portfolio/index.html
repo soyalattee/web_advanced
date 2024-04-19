@@ -13,13 +13,14 @@
     <title>soya design portfolio</title>
     <script>
       function toggleMode() {
-        let isDark = true;
-        if (isDark) {
+        let isDark = document.documentElement.getAttribute('data-theme');
+        console.log(isDark)
+        if (isDark === 'dark') {
           // 다크모드
-          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.setAttribute("data-theme", "light");
         } else {
           // light 모드
-          document.documentElement.setAttribute("data-theme", "light"); 
+          document.documentElement.setAttribute("data-theme", "dark"); 
         }
       }
        

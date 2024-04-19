@@ -16,6 +16,7 @@
   --shadow-color: rgb(0, 0, 0, 0.2);
   --bg-project-item: white;
 }
+
 html {
   font-family: "Poppins", sans-serif;
 }
@@ -39,6 +40,7 @@ p {
   padding-top: 6px;
 }
 .container-duck {
+  z-index: 10;
   cursor: pointer;
   position: fixed;
   right: 20px;
@@ -126,6 +128,7 @@ ul li {
 }
 
 .introduce-photo {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,6 +146,17 @@ ul li {
   border-radius: 300px;
   width: 349px;
   height: 349px;
+}
+.sunglasses {
+  display: none;
+}
+.sunglasses.on {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: auto;
+  top: 95px;
+  rotate: -5deg;
 }
 
 .introduce-desc > p {
@@ -358,4 +372,8 @@ span.pink {
     grid-template-columns: repeat(2, 1fr);
     /*   grid-gap: 60px; */
   }
+}
+/* audio */
+#audioPlayer {
+  display: none;
 }

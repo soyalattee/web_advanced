@@ -14,33 +14,46 @@
     <script>
       function toggleMode() {
         let isDark = document.documentElement.getAttribute('data-theme');
-        console.log(isDark)
+        var audio = document.getElementById("audioPlayer");
         if (isDark === 'dark') {
           // 다크모드면 밝게
           document.documentElement.setAttribute("data-theme", "light");
-          toggleDuck(false);
+          audio.pause();
+          toggleDark(false);
         } else {
           // light모드면 dark로
           document.documentElement.setAttribute("data-theme", "dark"); 
-          toggleDuck(true);
+          audio.play();
+          toggleDark(true);
         }
       }
-      function toggleDuck(isDark) {
+      function toggleDark(isDark) {
         const duckLight = document.getElementById('l-duck');
         const duckDark = document.getElementById('d-duck');
+        const darkElements = document.getElementsByClassName('dark');
+        let elementsArray = Array.from(darkElements);
+        console.log(elementsArray)
         if (isDark) {
           duckDark.classList.add('on');
           duckLight.classList.remove('on');
+          elementsArray.forEach(element => {
+            element.classList.add('on')
+          });
         } else {
           duckLight.classList.add('on');
           duckDark.classList.remove('on');
+          elementsArray.forEach(element => {
+            element.classList.remove('on')
+          });
         }
       }
     </script>
   </head>
-    <body class="dark">
+    <body>
+      <audio id="audioPlayer" controls>
+        <source src="audio/Soul_Blaster_-_ede-studio.mp3" type="audio/mpeg">
+      </audio>
       <div class="container-duck">
-
         <div class="duck-hover">
           <span>Click Me!</span>
           <img class="speech-bubble" src="imgs/speech-bubble.png" alt="">
@@ -103,7 +116,8 @@
           <p>I build things for web</p>
         </div>
         <div class="introduce-photo">
-          <img src="imgs/photo_me.png" alt="">
+          <img src="imgs/photo_me.png" alt="photo-profile">
+          <img class="sunglasses dark" src="imgs/sunglassses.PNG" alt="sunglasses" >
         </div>
       </section>
       <section class="container wrap-techstack">
